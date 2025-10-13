@@ -29,5 +29,5 @@ Sistema informático para automatizar la generación de documentos administrativ
 
 * [cite_start]Armando Becerra García [cite: 6]
 * [cite_start]Mauricio Emmanuel García Valerio [cite: 7]
-* [cite_start]Rogelio Zertuche Saucedo [cite: 8]
-* [cite_start]Ángel Daniel Chávez Rodríguez [cite: 9]
+* [cite_start]Edgar Alonso Carrillo Quijano   [cite: 8]
+* [cite_start]Jose Enrique Vazquez Garcia[cite: 9]

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: beyco-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: your_strong_root_password
+      MYSQL_DATABASE: beyco_db
+      MYSQL_USER: beyco_user
+      MYSQL_PASSWORD: your_strong_user_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db-init:/docker-entrypoint-initdb.d
+      - mysql-data:/var/lib/mysql
+
+  app:
+    container_name: beyco-app
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_USER: beyco_user
+      DB_PASSWORD: your_strong_user_password
+      DB_NAME: beyco_db
+    depends_on:
+      - db
+
+volumes:
+  mysql-data:

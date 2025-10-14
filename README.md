@@ -25,9 +25,62 @@ Sistema informático para automatizar la generación de documentos administrativ
 
 [cite_start]El desarrollo del proyecto se guió por la metodología **Rational Unified Process (RUP)**, utilizando un enfoque iterativo e incremental para el análisis y diseño del sistema[cite: 46, 102].
 
+## 🚀 Cómo Empezar (Entorno de Desarrollo con Docker)
+
+Este proyecto está 100% dockerizado, por lo que no necesitas instalar MySQL o Node.js/Python/PHP en tu máquina.
+
+### **Prerrequisitos**
+
+Asegúrate de tener instalado lo siguiente:
+* [Git](https://git-scm.com/)
+* [Docker](https://www.docker.com/products/docker-desktop/) y Docker Compose
+* [Visual Studio Code](https://code.visualstudio.com/)
+* La extensión [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) para VS Code (Recomendado).
+
+### **Instalación y Despliegue**
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/Braus80/BEYCO-SDADD.git](https://github.com/Braus80/BEYCO-SDADD.git)
+    ```
+
+2.  **Navega al directorio del proyecto:**
+    ```bash
+    cd BEYCO-SDADD
+    ```
+
+3.  **Levanta los contenedores:**
+    ```bash
+    docker-compose up --build
+    ```
+    Este único comando hará todo lo siguiente:
+    * Construirá la imagen de la aplicación.
+    * Creará y configurará el contenedor de la base de datos MySQL.
+    * Inicializará la base de datos con el esquema que se encuentra en `db-init/init.sql`.
+    * Iniciará la aplicación y la conectará a la base de datos.
+
+4.  **¡Listo!**
+    * Tu aplicación estará corriendo en `http://localhost:3000` (o el puerto que hayas configurado).
+    * La base de datos MySQL estará accesible en el puerto `3306` de tu máquina local.
+
+### **Desarrollo Profesional con VS Code Dev Containers**
+La forma recomendada de trabajar es desarrollar *dentro* del contenedor para tener un entorno consistente.
+
+1.  Abre la carpeta del proyecto en VS Code.
+2.  VS Code detectará la configuración y te mostrará una notificación. Haz clic en **"Reopen in Container"**.
+3.  ¡Listo! Ahora tu terminal y todas las herramientas de VS Code se están ejecutando dentro del contenedor de la aplicación.
+
+### **Conexión a la Base de Datos**
+Puedes conectarte a la base de datos desde tu herramienta preferida (TablePlus, DBeaver, MySQL Workbench) con los siguientes datos:
+* **Host:** `127.0.0.1` o `localhost`
+* **Port:** `3306`
+* **User:** `beyco_user` (definido en `docker-compose.yml`)
+* **Password:** `your_strong_user_password` (definido en `docker-compose.yml`)
+* **Database:** `beyco_db` (definido en `docker-compose.yml`)
+
 ## Autores
 
 * [cite_start]Armando Becerra García [cite: 6]
 * [cite_start]Mauricio Emmanuel García Valerio [cite: 7]
-* [cite_start]Rogelio Zertuche Saucedo [cite: 8]
-* [cite_start]Ángel Daniel Chávez Rodríguez [cite: 9]
+* [cite_start]Edgar Alonso Carrillo Quijano   [cite: 8]
+* [cite_start]Jose Enrique Vazquez Garcia[cite: 9]

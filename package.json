@@ -1,0 +1,23 @@
+{
+  "name": "beyco-sdadd",
+  "version": "1.0.0",
+  "description": "Sistema informático para automatizar la generación de documentos administrativos en Consultores BEYCO y Asociados, reduciendo el tiempo operativo en la elaboración de exámenes, registros de asistencia, DC-3 y diplomas. [cite: 94] # Sistema de Automatización de Documentos para BEYCO (SDADD)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Braus80/BEYCO-SDADD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Braus80/BEYCO-SDADD/issues"
+  },
+  "homepage": "https://github.com/Braus80/BEYCO-SDADD#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

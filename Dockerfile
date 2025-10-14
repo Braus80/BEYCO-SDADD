@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 3000
 
 # El comando para iniciar tu aplicación cuando el contenedor arranque
-CMD [ "node", "server.js" ] # Cambia "server.js" por tu archivo de entrada
+CMD [ "node", "index.js" ]

@@ -24,11 +24,6 @@ Sistema informático para automatizar la generación de documentos administrativ
 ## Metodología
 
 [cite_start]El desarrollo del proyecto se guió por la metodología **Rational Unified Process (RUP)**, utilizando un enfoque iterativo e incremental para el análisis y diseño del sistema[cite: 46, 102].
-# BEYCO-SDADD
-
-Descripción breve de lo que hace el proyecto.
-
----
 
 ## 🚀 Cómo Empezar (Entorno de Desarrollo con Docker)
 

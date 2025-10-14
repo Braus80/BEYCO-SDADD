@@ -77,3 +77,7 @@ El desarrollo se guió por la metodología **Rational Unified Process (RUP)**. E
 * Mauricio Emmanuel García Valerio
 * Edgar Alonso Carrillo Quijano
 * Jose Enrique Vazquez Garcia
+
+## 📖 Documentación
+
+* [Ver explicación detallada de la Base de Datos](docs/database_setup.md)

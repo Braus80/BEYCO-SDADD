@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-d",
+                "bin",
+                "--source-path",
+                "src/main/java",
+                "-cp",
+                "libs/mysql-connector-j-9.4.0.jar",
+                "src/main/java/com/beyco/app/Main.java"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$javac"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,441 @@
+.pageContainer {
+  min-height: 100vh;
+  background: white;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.titleSection h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2em;
+}
+
+.logo {
+  height: 50px;
+}
+
+.mainContent {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.userTable th {
+  background: #001f3f;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.userTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #dee2e6;
+  color: black;
+}
+
+.userTable tr:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.selectedRow {
+  background-color: #e3f2fd !important;
+}
+
+.newRow {
+  background-color: #f1f8e9;
+}
+
+.newRow input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.newRow input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Estilo para el menú desplegable de roles */
+.rolSelect {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background-color: white;
+  cursor: pointer;
+}
+
+.rolSelect:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.rolSelect option {
+  padding: 8px;
+  font-size: 0.9em;
+}
+
+.firmaButton {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.2s ease;
+}
+
+.firmaButton:hover {
+  background: #218838;
+}
+
+.fileName {
+  margin-left: 8px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #6c757d;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+.btnGuardar {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btnGuardar:hover:not(:disabled) {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.btnGuardar:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+.btnAtras {
+  background: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btnAtras:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+/* Estilos para el modal de cambio de contraseña */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  min-width: 400px;
+  max-width: 500px;
+  width: 90%;
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  text-align: center;
+  font-size: 1.3em;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.passwordForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.passwordInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.passwordInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.passwordInput::placeholder {
+  color: #999;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.modalButtons button {
+  padding: 12px 25px;
+  min-width: 140px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modalButtons .btnGuardar {
+  background: #28a745;
+  color: white;
+}
+
+.modalButtons .btnGuardar:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.modalButtons .btnAtras {
+  background: #6c757d;
+  color: white;
+}
+
+.modalButtons .btnAtras:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .actionButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .userTable {
+    font-size: 0.8em;
+  }
+  
+  .userTable th,
+  .userTable td {
+    padding: 8px 10px;
+  }
+  
+  .btn,
+  .btnGuardar,
+  .btnAtras {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .modal {
+    min-width: 300px;
+    padding: 20px;
+  }
+
+  .modal h3 {
+    font-size: 1.1em;
+  }
+
+  .modalButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modalButtons button {
+    min-width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageContainer {
+    padding: 10px;
+  }
+  
+  .mainContent {
+    padding: 15px;
+  }
+  
+  .userTable {
+    font-size: 0.7em;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn,
+  .btnGuardar,
+  .btnAtras {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .modal {
+    min-width: 280px;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .passwordInput {
+    padding: 10px;
+  }
+
+  .formGroup label {
+    font-size: 0.9em;
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .modal {
+    animation: none;
+  }
+  
+  .btn,
+  .btnGuardar,
+  .btnAtras,
+  .modalButtons button {
+    transition: none;
+  }
+}
+
+/* Estados de focus para accesibilidad */
+.btn:focus,
+.btnGuardar:focus,
+.btnAtras:focus,
+.passwordInput:focus,
+.rolSelect:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}

@@ -1,0 +1,5 @@
+com\beyco\app\controllers\UsuarioController.class
+com\beyco\app\services\UsuarioService.class
+com\beyco\app\models\Usuario.class
+com\beyco\app\db\Database.class
+com\beyco\app\Main.class

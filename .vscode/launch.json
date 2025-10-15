@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.beyco.app.Main",
+            "preLaunchTask": "build",
+            "classPaths": [
+                "bin",
+                "src/main/resources",
+                "libs/mysql-connector-j-9.4.0.jar"
+            ]
+        }
+    ]
+}

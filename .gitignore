@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -39,3 +40,30 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+=======
+# Dependencias de Node.js
+/node_modules
+
+# Archivos de entorno (Contienen secretos y contraseñas)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# Archivos de sistema de macOS
+.DS_Store
+
+# Archivos de configuración del editor
+.vscode/
+
+# Archivos de build (si aplica)
+/dist
+/build
+>>>>>>> 6f6b07da5817e7493d9e1d06173fe40717ef91b5
